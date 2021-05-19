@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euf -o pipefail
+
+CURRENT="$(dirname "$0")"
+ROOT_DIR="$CURRENT/.."
+
+(cd $ROOT_DIR && pipenv run python -m mirrorer.cli "$@")
